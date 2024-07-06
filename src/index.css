@@ -1,0 +1,74 @@
+* {
+  font-family: 'primeryFont', 'Roboto', 'Lato', sans-serif !important;
+}
+body {
+  background-color: silver;
+}
+.Mui-selected {
+  border: 1px solid orange;
+}
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  border: 1px solid orange;
+  background-color: inherit !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  height: 33px;
+}
+/* Override the hover styles for the MUI Select component */
+.MuiInputBase-root:hover.MuiSelect-select {
+  border-color: #ff0000 !important; /* Change border color on hover */
+}
+
+/* Optional: Change the background color on focus */
+.MuiOutlinedInput-root:focus-within.MuiOutlinedInput-notchedOutline {
+  border-color: #00ff00 !important; /* Change border color on focus */
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: orange !important;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected:hover {
+  background-color: orange !important;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
+  background-color: orange !important;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  padding: 0 !important;
+  border-radius: 40px !important;
+}
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  border-radius: 10px !important;
+  margin-top: 5px;
+}
+.css-1fq4b3s-getRowContainerStyle-Row {
+  cursor: pointer;
+}
+.css-1fq4b3s-getRowContainerStyle-Row:not(:last-of-type) > .td {
+  margin-top: 2px !important;
+}
+.css-ormrz3-getRowContainerStyle-Row:not(:last-of-type) > .td {
+  margin-top: 2px !important;
+}
+.css-1xxt1qd-getRowContainerStyle-Row .td:nth-of-type(2) > div {
+  padding-right: 20px !important;
+}
+.css-hn9u9j-Table {
+  margin: 0 !important;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  height: 300px;
+  width: 400px;
+  overflow-x: hidden;
+}
+.MuiDialog-container.MuiDialog-scrollPaper.css-hz1bth-MuiDialog-container {
+  display: block !important;
+  margin-left: -20px !important;
+}
+.css-c5v1qu-MuiInputBase-input-MuiFilledInput-input {
+  padding-top: 5px !important;
+}
+.css-cz6xlx {
+  border-right: 1px solid #3f51b5 !important;
+}
