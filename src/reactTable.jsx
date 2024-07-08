@@ -76,6 +76,7 @@ const ReactTable = ({ direction }) => {
     nodes: [],
   });
   const [hiddenColumns, setHiddenColumns] = useState([]);
+  const [loadMoreShow, setLoadMoreShow] = useState({});
   const [idsNested, setIdsNested] = useState([]);
   const [idsMore, setIdsMore] = useState([]);
   const [childPageNumber, setChildPageNumber] = useState({});
@@ -129,6 +130,10 @@ const ReactTable = ({ direction }) => {
       const total = await res.data.totalCount;
       setList((list) => ({ ...list, total }));
     } else {
+      setLoadMoreShow((loadMoreShow) => ({
+        ...loadMoreShow,
+        [params.id]: res.data.assets.length,
+      }));
       setChildPageNumber((childPageNumber) => ({
         ...childPageNumber,
         [params.id]: 1,
@@ -210,6 +215,7 @@ const ReactTable = ({ direction }) => {
   }
 
   const handleLoadMore = async (item) => {
+    console.log('loadmore data', loadMoreShow);
     setIdsMore(idsNested.concat(item.id));
     await doGet({
       offset: childPageNumber[item.id],
@@ -462,6 +468,7 @@ const ReactTable = ({ direction }) => {
                               <FetchMoreRow
                                 key={item.id + ancestor.id}
                                 item={ancestor}
+                                loadMoreShow={loadMoreShow}
                                 handleLoadMore={handleLoadMore}
                               />
                             )
